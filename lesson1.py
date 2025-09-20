@@ -3,7 +3,7 @@
 #Date: 19/09/2025
 #Description: Programs to dempnstrate the use of TKinter
 
-#Note: PEP88 Standards
+#Note: PEP8 Standards
 
 #Libraries
 from tkinter import *
