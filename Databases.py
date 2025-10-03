@@ -19,9 +19,13 @@ cur.execute("CREATE TABLE IF NOT EXISTS people (first_name text, last_name text,
 #cur.execute("INSERT INTO people VALUES('Peter', 'Moore', 21)")
 
 #select example - do not use *
-for row in cur.execute('SELECT rowid, first_name, age FROM people'):
+for row in cur.execute('SELECT rowid, first_name, age FROM people WHERE rowid=1'):
   print(row)
 
+#deleting data
+cur.execute("DELETE FROM people WHERE rowid=1")
+for row in cur.execute('SELECT rowid, first_name, age FROM people WHERE rowid=1'):
+  print(row)
 #commit (or save) the changes
 con.commit()
 
