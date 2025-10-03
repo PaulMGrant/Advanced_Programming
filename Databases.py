@@ -24,7 +24,7 @@ for row in cur.execute('SELECT rowid, first_name, age FROM people WHERE rowid=1'
 
 #deleting data
 cur.execute("DELETE FROM people WHERE rowid=1")
-for row in cur.execute('SELECT rowid, first_name, age FROM people WHERE rowid=1'):
+for row in cur.execute('SELECT rowid, first_name, age FROM people'):
   print(row)
 #commit (or save) the changes
 con.commit()
