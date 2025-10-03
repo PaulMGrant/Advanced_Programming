@@ -16,14 +16,14 @@ cur = con.cursor()
 cur.execute("CREATE TABLE IF NOT EXISTS people (first_name text, last_name text, age integer)")
 
 #insert a row of data(called a record)
-#cur.execute("INSERT INTO people VALUES('Peter', 'Moore', '21')")
+#cur.execute("INSERT INTO people VALUES('Peter', 'Moore', 21)")
 
 #select example - do not use *
-for row in cur.execute('SELECT first_name, age FROM people'):
+for row in cur.execute('SELECT rowid, first_name, age FROM people'):
   print(row)
 
 #commit (or save) the changes
 con.commit()
 
-#close the connection (Python SHOULD do this)
+#close the connection (Python SHOULD do this automatically)
 con.close()
